@@ -1,0 +1,122 @@
+/* Basic Reset and Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: sans-serif;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center;
+    align-items: center;
+    background-color: #EE82EE; /* A nice light pink background */
+    overflow: hidden; /* Prevent scrollbars when button moves */
+}
+
+/* Main Container Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* GIF Styling */
+.gif {
+    max-width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Header Text */
+.header-text {
+    font-size: 2em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Button Group */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between buttons */
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* General Button Styles */
+.btn {
+    padding: 10px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Yes Button Specific Styles */
+#yesBtn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+#yesBtn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* No Button Specific Styles (important for the moving effect) */
+#noBtn {
+    background-color: #f44336; /* Red */
+    color: white;
+    /* This makes the 'No' button positionable relative to the viewport, 
+       but we will change this to 'absolute' via JavaScript when it starts moving */
+    position: relative; 
+}
+#noBtn:hover {
+    background-color: #da190b;
+}
+
+/* Utility Class for JavaScript */
+.hidden {
+    display: none !important;
+}
+
+/* Styling for the final message */
+#message-container .header-text {
+    font-size: 2.5em;
+    color: #008080; /* A nice teal color */
+}
+
+/* Styling for the moving 'No' button */
+.moving-btn {
+    /* Use 'absolute' positioning to let the button move freely */
+    position: absolute !important; 
+    transition: none !important; /* Remove transition so it moves instantly */
+}
+
+
+/* --- CSS to make the YES button HUGE and center it --- */
+.yes-grow {
+    /* Make the button much larger */
+    padding: 100px 100px !important; 
+    font-size: 2.5em !important;
+    
+    /* Make it look different/more urgent */
+    background-color: #4CAF50; /* A different, bright green */
+    border-color: #388E3C;
+    
+    /* Add a nice animation for the growth */
+    transition: all 0.5s ease-in-out;
+}
+
+/* Optional: Center the Yes button after No disappears */
+#main-container {
+    /* If your buttons are in a flex container, this will help center the remaining one */
+    justify-content: center; 
+}
