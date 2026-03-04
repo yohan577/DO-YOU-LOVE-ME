@@ -97,9 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Add the final response content
         messageContainer.innerHTML = `
-            <h1 class="header-text">Hehehehe, I love you, too. BABY GURL (FREDELENE) &lt;3</h1>
+            <h1 class="header-text">Hehehehe, I love you, too. BABYGURL (FREDELENE) &lt;3</h1>
             <img class="gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnR3ZXo2YXd6dWVxdHA5NDN6ZGhkeG1qOWhrcWJwMGJ5N3I0dXN2NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Jt5GkWXoLswrgP2Aws/giphy.gif" alt="Happy response GIF">
         `;
     });
 
 });
+
